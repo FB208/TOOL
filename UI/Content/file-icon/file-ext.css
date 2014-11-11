@@ -1,0 +1,58 @@
+﻿.file-img {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-image: url('file-icon.png');
+}
+
+.file-jpg, .file-jpeg {
+    background-position: 0px -96px;
+}
+
+.file-doc, .file-docx {
+    background-position: -64px -64px;
+}
+
+.file-ppt, .file-pptx {
+    background-position: -96px -64px;
+}
+
+.file-els, .file-elsx {
+    background-position: -32px -64px;
+}
+
+.file-rar {
+    background-position: -160px -64px;
+}
+
+.file-zip {
+    background-position: -192px -64px;
+}
+
+.file-7z {
+    background-position: -128px -64px;
+}
+
+.file-pdf {
+    background-position: -512px -64px;
+}
+
+.file-txt {
+    background-position: -672px -64px;
+}
+
+.file-png {
+    background-position: -64px -96px;
+}
+
+.file-bmp {
+    background-position: -96px -96px;
+}
+
+.file-gif {
+    background-position: -32px -96px;
+}
+
+.file-tif, .file-tiff {
+    background-position: -128px -96px;
+}

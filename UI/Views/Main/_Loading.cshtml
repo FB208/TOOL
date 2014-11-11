@@ -1,0 +1,26 @@
+﻿
+<div class="m-layer loading hidden">
+    <div class="lymask"></div>
+    <table class="lytable">
+        <tbody>
+            <tr>
+                <td class="lytd">
+                    <div class="lywrap" style="width:82px;">
+                        <div class="lyct">
+                            加载中
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    function lshow() {
+        $(".loading").show();
+        window.setTimeout(lhide, 5000);
+    }
+    function lhide() {
+        $(".loading").hide();
+    }
+</script>

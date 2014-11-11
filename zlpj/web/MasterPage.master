@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="CSS/media.css" rel="stylesheet" />
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+    <link href="CSS/themes/cupertino/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
+    <link href="CSS/img-ext.css" rel="stylesheet" />
+    <link href="CSS/img-extt.css" rel="stylesheet" />
+    <script src="JS/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="JS/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+    <script src="JS/JScript.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin: 0; width: 100%; height: 100%; background-color: rgb(234, 60, 4);">
+    <form id="form2" runat="server">
+        <%--头--%>
+        <div class="g-hd" style="height: 74px; width: 100%; background-color: rgb(255, 191, 1); overflow: hidden;">
+            <img alt="" src="/CSS/img/top.jpg" />
+        </div>
+        <%--左--%>
+        <div class="g-sd" style="overflow:hidden;">
+            <div id="left" style="background-color: rgb(236, 241, 243);">
+                <div>
+                    <b class="f-img f-img-leftltr" style="height: 29px; font-size: 12px; color: White; text-indent: 10px; line-height: 29px;">
+                        <b class="f-img f-img-ren" style="float: left; margin-top: 5px; display: inline; margin-left: 10px;"></b>
+                        <asp:Label ID="usernameLabel" runat="server" Text="管理员"></asp:Label>
+                        &nbsp; &nbsp;
+                             <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="White" OnClick="logoutLinkButton_Click">注销</asp:LinkButton>
+                    </b>
+                </div>
+                <div id="min" style="text-align: center;">
+                    <div id="pj1" class="vtitle  pj" runat="server">
+                        提案评价
+                    </div>
+                    <div id="pj2" class="vcon" runat="server">
+                        <ul class="vconlist">
+
+                            <li>
+                                <%--<b class="fff-img doc" style="position: absolute; top: 72px; left: 45px;"></b>--%>
+                                <a href="List_twpj.aspx" class="ui-corner-all">评价列表</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div id="fp1" class="vtitle  fp" runat="server">
+                        提案分配
+                    </div>
+                    <div id="fp2" class="vcon" style="display: none;" runat="server">
+                        <ul class="vconlist">
+                            <li>
+                                <a href="List_wfp.aspx" class="ui-corner-all">分配列表</a></li>
+                            <li>
+                                <a href="fpta.aspx" class="ui-corner-all">新建分配</a></li>                        
+                        </ul>
+                    </div>
+                     <div id="admin1" class="vtitle  yg" runat="server">
+                        用户管理
+                    </div>
+                    <div id="admin2" class="vcon" style="display: none;" runat="server">
+                        <ul class="vconlist">
+                            <li><a href="List_admin.aspx" class="ui-corner-all">用户列表</a></li>
+                            <li><a href="editor_admin.aspx" class="ui-corner-all">添加用户</a></li>  
+                       </ul>
+                    </div>
+                    <div id="tj1" class="vtitle  tj" runat="server">
+                        统计打印
+                    </div>
+                    <div id="tj2" class="vcon" style="display: none;" runat="server">
+                        <ul class="vconlist">
+                            <li>
+                                <%--<b class="fff-img log" style=" position: absolute; top: 138px; left: 55px; "></b>--%>
+                                <a href="proprint.aspx" class="ui-corner-all">打印提案</a></li>
+                        </ul>
+                    </div>
+                    <div id="ld1" class="vtitle  ld" runat="server">
+                        查看
+                    </div>
+                    <div id="ld2" class="vcon" style="display: none;" runat="server">
+                        <ul class="vconlist">
+                            <li>
+                                <%--<b class="fff-img log" style=" position: absolute; top: 138px; left: 55px; "></b>--%>
+                                <a href="List_pcforld.aspx" class="ui-corner-all">查看批次</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--中--%>
+        <a class="hidbutton middle" style="width: 10px; height: 100%" href="javascript:;"><span class="btpo fleft"></span></a>
+        <%--右--%>
+        <div style="background-color: White;" class="g-mn">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

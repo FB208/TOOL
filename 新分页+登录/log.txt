@@ -1,0 +1,10 @@
+ <img id="login" src="img/dl.jpg" style="cursor: pointer;" onmouseover="changesrc(1)" onclick="check()" onmouseout="changesrc(2)" />
+ function changesrc(flag) {
+        if (flag == 1) {
+            document.getElementById("login").src = "img/dl2.png";
+        }
+        if (flag == 2) {
+            document.getElementById("login").src = "img/dl.jpg";
+        }
+
+    }

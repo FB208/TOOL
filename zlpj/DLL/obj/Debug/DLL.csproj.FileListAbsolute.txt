@@ -1,0 +1,13 @@
+C:\Users\LG\Documents\Visual Studio 2013\Projects\zlpj\DLL\bin\Debug\DLL.dll
+C:\Users\LG\Documents\Visual Studio 2013\Projects\zlpj\DLL\bin\Debug\DLL.pdb
+C:\Users\LG\Documents\Visual Studio 2013\Projects\zlpj\DLL\obj\Debug\DLL.dll
+C:\Users\LG\Documents\Visual Studio 2013\Projects\zlpj\DLL\obj\Debug\DLL.pdb
+\\128.111.0.114\zlpj\DLL\bin\Debug\DLL.dll
+\\128.111.0.114\zlpj\DLL\bin\Debug\DLL.pdb
+\\128.111.0.114\zlpj\DLL\obj\Debug\DLL.csprojResolveAssemblyReference.cache
+\\128.111.0.114\zlpj\DLL\obj\Debug\DLL.dll
+\\128.111.0.114\zlpj\DLL\obj\Debug\DLL.pdb
+C:\Users\LG\Desktop\zlpj\DLL\bin\Debug\DLL.dll
+C:\Users\LG\Desktop\zlpj\DLL\bin\Debug\DLL.pdb
+C:\Users\LG\Desktop\zlpj\DLL\obj\Debug\DLL.dll
+C:\Users\LG\Desktop\zlpj\DLL\obj\Debug\DLL.pdb

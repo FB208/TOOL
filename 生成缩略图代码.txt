@@ -1,0 +1,24 @@
+HttpFileCollection aa = HttpContext.Current.Request.Files;
+string tmpjpg = System.Web.HttpContext.Current.Server.MapPath("~/") + "tmp\\tmp.jpg";//Í¼Æ¬»º´æÂ·¾¶
+byte[] aaa = GetPhoto(aa[0]);
+DLL.TOOL.ImagePro.MakePhoto(tmpjpg, aaa, false);
+DLL.TOOL.ImagePro.MakeThumbPhoto(tmpjpg, System.Web.HttpContext.Current.Server.MapPath("~/") + "tmp\\tmp_" + im.unid + ".jpg", 1000, 177, "W");//Éú³ÉËõÂÔÍ¼
+
+
+
+
+
+
+ public static byte[] GetPhoto(HttpPostedFile hpf)
+    {
+        int fileLen = hpf.ContentLength;
+
+        Byte[] fileData = new Byte[fileLen];
+
+        Stream sr = hpf.InputStream;
+
+        sr.Read(fileData, 0, fileLen);
+
+        return fileData;
+
+    }

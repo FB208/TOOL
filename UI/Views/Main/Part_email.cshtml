@@ -1,0 +1,16 @@
+﻿@{
+    AjaxOptions load = new AjaxOptions { UpdateTargetId = "main", OnBegin = "lshow", OnSuccess = "lhide", OnFailure = "lhide" };
+}
+<div class="vtitle hid rc">
+    @Ajax.ActionLink("电子邮政信息", "iframe", new { page = "/Calendar/index" }, load, new { @class = "a-blue" })
+</div>
+<div class="vcon">
+    <ul style="height: 80%;">
+        <li>@Ajax.ActionLink("收邮件", "index", "Calendar", load)</li>
+        <li>@Ajax.ActionLink("发邮件", "iframe", new { page = "/Calendar/index" }, load)</li>
+        <li><a href="#" target="main" class="ui-corner-all">个人地址簿</a></li>
+        <li><a href="#" target="main" class="ui-corner-all">邮政地址目录</a></li>
+        <li><a href="#" target="main" class="ui-corner-all">回收站</a></li>
+    </ul>
+</div>
+

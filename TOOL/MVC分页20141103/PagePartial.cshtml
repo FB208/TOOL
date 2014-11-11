@@ -1,0 +1,80 @@
+﻿@{
+    int pageindex = ViewBag.page == null ? 0 : Convert.ToInt32(ViewBag.page);
+    int spitindex = 0;
+    int pagecount = ViewBag.pagecount;
+    int recordcount = ViewBag.recordcount;
+    string pagesize = ViewData["pagesize"].ToString();
+    string control = ViewData["control"].ToString();
+    string actionname = ViewData["actionname"].ToString();
+    AjaxOptions load = new AjaxOptions { UpdateTargetId = "main", OnBegin = "lshow", OnSuccess = "lhide", OnFailure = "lhide" };
+}
+@if (pagecount > 0)
+{
+    <div class="m-page m-page-sr m-page-sm">
+        <i>共&nbsp;<b style="color:#39C">@pagecount</b>&nbsp;页&nbsp;<b style="color:#39C">@recordcount</b>&nbsp;条</i>
+        @Ajax.ActionLink("首页", actionname, control, new { page = 0, pagesize = pagesize }, load, new { @class = "pageprv " + (pageindex == 0 ? "z-dis" : "") })
+        @Ajax.ActionLink("上一页", actionname, control, new { page = pageindex > 0 ? pageindex - 1 : 0, pagesize = pagesize }, load, new { @class = "pageprv " + (pageindex > 0 ? "" : "z-dis") + "" })
+        @{ spitindex = pageindex - 2;}
+        @if (spitindex > 4)
+        {
+            @Ajax.ActionLink("1", actionname, control, new { page = 0, pagesize = pagesize }, load)
+        }
+        else
+        {
+            for (int i = 0; i < spitindex; i++)
+            {
+                @Ajax.ActionLink((i + 1).ToString(), actionname, control, new { page = i, pagesize = pagesize }, load)
+            }
+        }
+        @for (int i = pageindex - 2; i < pageindex; i++)
+        {
+            if (i >= pageindex || i < 0)
+            {
+                continue;
+            }
+            @Ajax.ActionLink((i + 1).ToString(), actionname, control, new { page = i, pagesize = pagesize }, load)
+        }
+        @Ajax.ActionLink((pageindex + 1).ToString(), actionname, control, new { page = pageindex, pagesize = pagesize }, load, new { @class = "z-crt" })
+        @for (int i = pageindex + 1; i < pagecount; i++)
+        {
+            if (i >= pageindex + 3)
+            {
+                break;
+            }
+            @Ajax.ActionLink((i + 1).ToString(), actionname, control, new { page = i, pagesize = pagesize }, load)
+        }
+        @{ spitindex = pageindex + 3; }
+        @if (pagecount - 4 > spitindex)
+        {
+            <i>...</i>
+            @Ajax.ActionLink((pagecount).ToString(), actionname, control, new { page = (pagecount - 1), pagesize = pagesize }, load)
+        }
+        else
+        {
+            for (int i = spitindex; i < pagecount; i++)
+            {
+                @Ajax.ActionLink((i + 1).ToString(), actionname, control, new { page = i, pagesize = pagesize }, load)
+            }
+        }
+        @Ajax.ActionLink("下一页", actionname, control, new { page = pageindex != pagecount - 1 ? pageindex + 1 : pageindex, pagesize = pagesize }, load, new { @class = "pagenxt " + (pageindex != pagecount - 1 ? "" : "z-dis") + "" })
+        @Ajax.ActionLink("尾页", actionname, control, new { page = (pagecount - 1), pagesize = pagesize }, load, new { @class = "pagenxt " + (pageindex == (pagecount - 1) ? "z-dis" : "") })
+        <input type="text" name="go" id="go" class="u-ipt" style="width:22px;height:12px;" value="@(pageindex+1)" onchange="changeJump(@pagecount)" />
+        @Ajax.ActionLink("跳转", actionname, control, new { page = 100, pagesize = pagesize }, load, new { id = "a_jump" })
+    </div>
+}
+<script>
+    $(function () {
+        var thisPage = $("#go").val() - 1;
+        $("#a_jump").attr("href", "/@control/@actionname?page=" + thisPage + "&pagesize=@pagesize");
+    })
+    function changeJump(pagecount) {
+        var thisPage = $("#go").val() - 1;
+        if (thisPage >= pagecount) {
+
+        }
+        else {
+            $("#a_jump").attr("href", "/@control/@actionname?page=" + thisPage + "&pagesize=@pagesize");
+        }
+        
+    }
+</script>

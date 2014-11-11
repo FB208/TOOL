@@ -1,0 +1,17 @@
+﻿@{
+    AjaxOptions load = new AjaxOptions { UpdateTargetId = "main", OnBegin = "lshow", OnSuccess = "lhide", OnFailure = "lhide" };
+}
+<div class="vtitle rc">
+    @Ajax.ActionLink("日程管理", "iframe", new { page = "/Calendar/index" }, load, new { @class = "a-white" })
+</div>
+<div class="vcon" style="display: none;">
+    <ul style="height: 80%;">
+        <li>@Ajax.ActionLink("日程管理", "index", "Calendar", load)</li>
+        <li>@Ajax.ActionLink("日程管理1", "iframe", new { page = "/Calendar/index" }, load)</li>
+        <li><a href="###">树形</a></li>
+        <li><a href="###">树形</a></li>
+        <li><a href="###">树形</a></li>
+        <li><a href="###">树形</a></li>
+        <li><a href="###">树形</a></li>
+    </ul>
+</div>

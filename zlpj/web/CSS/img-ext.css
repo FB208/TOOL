@@ -1,0 +1,78 @@
+﻿.f-img {
+    display: inline-block;
+    background-image: url('img/sumimgs.png');
+}
+/*.f-img-left { background-position: -0px -0px; width: 8px; height: 16px; top: 48%; position: relative; }
+.f-img-right { background-position: -0px -24px; width: 8px; height: 16px; top: 48%; position: relative; }*/
+.f-img-y1 {
+    background-position: -0px -0px;
+    width: 8px;
+    height: 27px;
+}
+
+.f-img-r {
+    background-position: -0px -37px;
+    width: 8px;
+    height: 27px;
+}
+
+.f-img-yuan {
+    background-position: -0px -80px;
+    width: 30px;
+    height: 27px;
+}
+
+.f-img-ren {
+    background-position: -56px -80px;
+    width: 20px;
+    height: 22px;
+    float: left;
+    margin-top: 1px;
+    display: inline;
+    margin-left: 10px;
+}
+
+.f-img-dl {
+    background-position: -0px -127px;
+    width: 90px;
+    height: 23px;
+}
+
+.f-img-tabo {
+    background-position: -0px -176px;
+    width: 128px;
+    height: 26px;
+}
+
+.f-img-tabt {
+    background-position: -0px -216px;
+    width: 127px;
+    height: 25px;
+}
+
+
+/*.f-img-delete { background-position: -0px -155px; width: 16px; height: 15px; }*/
+
+.f-img-leftltr {
+    height: 29px;
+    font-size: 12px;
+    color: White;
+    text-indent: 10px;
+    line-height: 29px;
+    background-position: 0px -279px;
+    width: 100%;
+}
+
+
+
+.fleft {
+    background-image: url('img/tj2.gif');
+    height: 15px;
+    width: 8px;
+}
+
+.fright {
+    background-image: url('img/jt.gif');
+    height: 15px;
+    width: 8px;
+}

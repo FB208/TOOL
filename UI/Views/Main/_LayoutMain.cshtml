@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="g-hd">
+    <img src="~/content/img/top.jpg" />
+</div>
+<div class="g-sd">
+    <div class="f-img f-img-leftltr">
+        <b class="f-img f-img-ren"></b>当前用户：XXXXXXX
+    </div>
+    <div class="min">
+        @Html.Partial("Part_email")
+        @Html.Partial("Part_GW")
+        @Html.Partial("Part_CalendarList")
+        @Html.Partial("Part_order")
+        @Html.Partial("Part_LoginOut")
+    </div>
+</div>
+<div class="middle">
+    <a class="hidbutton f-img f-img-left" href="javascript:;"></a>
+</div>
+<div id="main" class="g-mn">
+    @RenderBody()
+</div>
+<div class="g-ft">
+</div>
+@Html.Partial("_Loading")

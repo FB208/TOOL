@@ -1,0 +1,19 @@
+   PagePartial pagePartial = new PagePartial();
+
+   public ActionResult MyApply(string page,string pagesize)
+        {
+            BorrowViewModel model = new BorrowViewModel();
+            per_User user = Session["user"] as per_User;
+            ViewBag.User = user;
+            //获取当前用户所提交的借阅申请
+            model.per_BorrowList = db.per_Borrow.Where(b => b.per_UserID == user.per_UserID && b.per_Borrow_state == 1).ToList();
+            model.per_PicList = db.per_PicSave.ToList();
+            //分页
+            PageModel<per_Borrow> pagemodel = pagePartial._PagePartial(page, pagesize, model.per_BorrowList);
+            ViewBag.page = pagemodel.page;
+            ViewBag.pagecount = pagemodel.pagecount;
+            ViewBag.recordcount = pagemodel.recordcount;
+            ViewBag.pagesize = pagesize;
+            model.per_BorrowList = pagemodel.list;
+            return View(model);
+        }
