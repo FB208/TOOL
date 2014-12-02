@@ -52,7 +52,7 @@
                            <%-- <li><a href="printsop.aspx?parameter=2"  target="_blank"class="ui-corner-all"><span class="icon doc2">显示器表</span></a></li>
                             <li><a href="printsop.aspx?parameter=1"  target="_blank"class="ui-corner-all"><span class="icon doc2">打印机表</span></a></li>--%>
                             <li><a href="printbook.aspx"  target="_blank"class="ui-corner-all"><span class="icon doc2">笔记本表</span></a></li>
-                             <li><a href="printuser.aspx"  target="_blank"class="ui-corner-all"><span class="icon doc2">使用人表</span></a></li>
+                            <li><a href="printuser.aspx"  target="_blank"class="ui-corner-all"><span class="icon doc2">使用人表</span></a></li>
                             <li><a href="taizhang.aspx"  target="_blank"class="ui-corner-all"><span class="icon doc2">显示台帐</span></a></li>
                             <li><a href="account.aspx" class="ui-corner-all"><span class="icon sum2" style="margin-top:5px;">维修统计</span></a></li>
                         </ul>

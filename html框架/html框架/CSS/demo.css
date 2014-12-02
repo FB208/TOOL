@@ -1,0 +1,7 @@
+﻿* { margin: 0; padding: 0; }
+.exp, .code { margin: 40px; }
+h3 { margin: 10px; color: red; }
+h4 { margin: 4px; color: blue; }
+a:link { text-decoration: none; color: #0067C3; }
+a:visited { text-decoration: none; color: #0067C3; }
+a:hover { color: red; text-decoration: underline; }

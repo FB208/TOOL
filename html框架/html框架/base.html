@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="CSS/demo.css" rel="stylesheet" />
+    <script src="JS/demo.js"></script>
+    <style>
+        ul { list-style-type: decimal; margin: 20px; }
+        li { margin: 4px; }
+    </style>
+</head>
+<body>
+    <div class="code">
+        <h3>所有css、js除主体外一律隔离</h3>
+        <p>
+            单独建立该功能插件的文件夹
+        </p>
+        <hr />
+        <h3>右侧内容区域</h3>
+        <p>默认采用iframe调用，也可以用.net模板页实现。模板页实现需要修改链接的target="bg"属性</p>
+        <hr />
+        <h3>主元素命名</h3>
+        <ul>
+            <li>
+                头区域：id=headimg
+            </li>
+            <li>
+                整体主区域：id=mi,iframe id=main name=main
+            </li>
+            <li>
+                附件图标类：class=file-img,file-*(文件扩展名)
+            </li>
+        </ul>
+        <hr />
+        <h3>系统已使用关键字</h3>
+        <h3>id类</h3>
+        <h4>主体</h4>
+        <p>headimg,mi,main</p>
+        <hr />
+        <h3>class类</h3>
+        <h4>主体</h4>
+        <p>main</p>
+        <h4>附件小图标</h4>
+        <p>file-img,file-*</p>
+    </div>
+</body>
+</html>
